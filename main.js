@@ -1,33 +1,69 @@
-function cekNilai() {
-    let nim = document.getElementById("nim").value.trim();
-    let nilai = parseFloat(document.getElementById("nilai").value);
-    let output = document.getElementById("output");
+// alert('halo wasap gengs') // pop up
+// console.log('ini sebuah console') // inspect
 
-    // Validasi input kosong atau bukan angka
-    if (nim === "" || isNaN(nilai)) {
-        output.innerHTML = "<span class='error'>Harap masukkan NIM dan nilai yang valid!</span>";
-        return;
-    }
+// function contohLet() {
+//     let y = 10;
+//     if (true) {
+//         let y = 20;
+//         console.log("Nilai dalam blok:", y);
+//     }
+//     console.log("Nilai luar blok:", y);
+// }
 
-    // Validasi nilai harus di antara 0 - 100
-    if (nilai < 0 || nilai > 100) {
-        output.innerHTML = "<span class='error'>Nilai tidak valid!</span>";
-        return;
-    }
+// contohLet();
 
-    let hurufMutu;
-    if (nilai >= 80) {
-        hurufMutu = "A";
-    } else if (nilai >= 70) {
-        hurufMutu = "B";
-    } else if (nilai >= 60) {
-        hurufMutu = "C";
-    } else if (nilai >= 50) {
-        hurufMutu = "D";
-    } else {
-        hurufMutu = "E";
-    }
+// let nama = 'Nur Salamah Azzahrah'; // string
+// let usia = 20; // integer
+// let tinggiBadan = 148.8; // double atau float
+// let beratBadan;
+// beratBadan = 43.5; // double atau float
+// let uang = null;
 
-    // Menampilkan hasil
-    output.innerHTML = NIM: ${nim} <br> Nilai: ${nilai} <br> Huruf Mutu: <strong>${hurufMutu}</strong>;
-}
+// if (uang == null) {
+//     uang = "belum ada";
+// } else {
+//     uang = "udah ada";
+// }
+
+// switch (uang) {
+//     case 1:
+//         uang = "punya sedikit";
+//         break;
+//     case 2:
+//         uang = "punya cukup";
+//         break;
+//     default:
+//         uang = "tidak ada";
+//         break;
+// }
+
+// let uangAwal = 20000;
+// let uangTambahan = 15000;
+// const uangTotal = uangAwal - uangTambahan; // aritmatika
+
+// alert('nama saya ' + nama) // pop up
+// alert(nama saya ${nama}, usia saya ${usia} tahun, tinggi badan saya ${tinggiBadan} cm);
+
+// alert(uang awal gue sebesar Rp.${uangAwal} dan gue dikasih tambahan Rp.${uangTambahan}, jadi totalnya Rp.${uangTotal});
+
+// let namaPanggilan = [
+//     'Nur',  // index 0
+//     'Ara',  // index 1
+//     'Nuy'   // index 2
+// ];
+
+// let mahasiswa = {
+//     nama: "Rina",
+//     usia: 20,
+//     jurusan: "Informatika"
+// }; // Object
+
+// console.log(mahasiswa.jurusan);
+
+// namaPanggilan.push('Nun', 'Zahra'); // push: menambahkan isi array di akhir
+// namaPanggilan.shift(); // shift: menghapus salah satu index array dari awal
+// namaPanggilan.pop(); // pop: menghapus salah satu index array dari akhir
+
+// alert(namaPanggilan);
+
+// console.log(namaPanggilan.length); // menampilkan panjang array

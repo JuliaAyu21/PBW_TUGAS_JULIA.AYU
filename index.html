@@ -1,56 +1,22 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Data Diri</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Kalkulator Sederhana</title>
 </head>
 <body>
-    <div class="card">
-        <h2>Form Data Diri</h2>
-        <form>
-            <div class="form-group">
-                <label for="nama">Nama</label>
-                <input type="text" id="nama" name="nama" required>
-            </div>
+    <h2>Kalkulator</h2>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <button onclick="hitung()">Hitung</button>
+    <p>Hasil: <span id="hasil"></span></p>
 
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-
-            <div class="form-group">
-                <label>Jenis Kelamin</label>
-                <input type="radio" id="laki-laki" name="jenis_kelamin" value="Laki-laki"> Laki-Laki
-                <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan">Perempuan
-            </div>
-
-            <div class="form-group">
-                <label>Hobi</label>
-                <input type="checkbox" id="musik" name="hobi" value="Musik">Musik
-                <input type="checkbox" id="olahraga" name="hobi" value="Olahraga">Olahraga
-            </div>
-
-            <div class="form-group">
-                <label>Hobi</label>
-                <input type="checkbox" id="musik" name="hobi" value="Musik">Musik
-                <input type="checkbox" id="olahraga" name="hobi" value="Olahraga">Olahraga
-            </div>
-
-            <div class="form-group">
-                <label>Pilih Kota</label>
-                <select name="kota" id="kota">
-                    <option value="">-- Pilih Kota --</option>
-                    <option value="jakarta">Jakarta</option>
-                    <option value="bandung">Bandung</option>
-                    <option value="surabaya">Surabaya</option>
-                    <option value="medan">Medan</option>
-                </select>
-            </div>
-
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+    <script>
+        function hitung() {
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            let hasil = parseInt(num1) - parseInt(num2);
+            document.getElementById("hasil").innerText = hasil;
+        }
+    </script>
 </body>
 </html>
