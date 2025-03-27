@@ -1,47 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form Data Diri</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Contoh Dasar Form HTML -->
-     <form action="" method="">
+    <div class="card">
+        <h2>Form Data Diri</h2>
+        <form>
+            <div class="form-group">
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
 
-     </form>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
 
-     <!-- Input Text & Textarea -->
-      <input type="text" name="username"> <br>
-      <textarea name="komentar" rows="4" cols="50" placeholder="Masukkan Komentar Anda"></textarea> <br>
+            <div class="form-group">
+                <label>Jenis Kelamin</label>
+                <input type="radio" id="laki-laki" name="jenis_kelamin" value="Laki-laki"> Laki-Laki
+                <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan">Perempuan
+            </div>
 
-      <!-- Dropdown (Combobox) dan List -->
-       <select name="Pilihan">
-              <option value="1">Pilihan 1</option>
-              <option value="2">Pilihan 2</option>
-       </select> <br>
+            <div class="form-group">
+                <label>Hobi</label>
+                <input type="checkbox" id="musik" name="hobi" value="Musik">Musik
+                <input type="checkbox" id="olahraga" name="hobi" value="Olahraga">Olahraga
+            </div>
 
-       <!-- Radio Button & Checkbox -->
-        <label><input type="radio" name="gender" value="male">Laki-Laki</label> 
-        <label><input type="radio" name="gender" value="Female">Perempuan</label> <br>
-        
-        <!-- Checkbox -->
-        <label><input type="checkbox" name="hobi" value="musik">Musik</label>
-        <label><input type="checkbox" name="hobi" value="olahraga">Olahraga</label>
-        <label><input type="checkbox" name="hobi" value="membaca">Membaca</label> <br>
+            <div class="form-group">
+                <label>Hobi</label>
+                <input type="checkbox" id="musik" name="hobi" value="Musik">Musik
+                <input type="checkbox" id="olahraga" name="hobi" value="Olahraga">Olahraga
+            </div>
 
-        <!-- File Upload -->
-        <form action="upload.php" method="post" enctype="multipart/form-data">
-            <label for="file">Pilih File:</label>
-            <input type="file" id="file" name="file">
-            <button type="submit">Unggah</button>
-        </form> <br>
+            <div class="form-group">
+                <label>Pilih Kota</label>
+                <select name="kota" id="kota">
+                    <option value="">-- Pilih Kota --</option>
+                    <option value="jakarta">Jakarta</option>
+                    <option value="bandung">Bandung</option>
+                    <option value="surabaya">Surabaya</option>
+                    <option value="medan">Medan</option>
+                </select>
+            </div>
 
-        <!-- Validasi Form Dasar dengan HTML -->
-        <input type="text" name="username" required minlength="5" maxlength="20"> <br>
-        <input type="email" name="email" required> <br>
-        <input type="number" name="age" min="18" max="60"> <br>
-        <button type="submit">Kirim</button>
-        
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
